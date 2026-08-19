@@ -39,7 +39,12 @@ builder.add_edge("step_3", END)
 checkpointer = InMemorySaver()
 graph = builder.compile(checkpointer=checkpointer)
 
+# from the previous snippet, we can see that the checkpointer is responsible for saving the state of the workflow at certain points, allowing for recovery in case of failure or interruption. In this example, we are using an InMemorySaver as our checkpointer, which saves the state in memory.
 
+
+# these are the steps that will be executed in the workflow. Step 1 and Step 3 are simple steps that print a message and return a state. Step 2 simulates a long-running hang by sleeping for 1000 seconds, which allows us to manually interrupt the execution to simulate a crash.
+
+# these can be used for debugging and monitoring the workflow's progress. The checkpointer allows us to resume execution from the last saved state, which can save time and resources in case of unexpected interruptions.
 try:
     print("▶️ Running graph: Please manually interrupt during Step 2...")
     graph.invoke({"input": "start"}, config={"configurable": {"thread_id": 'thread-1'}})
