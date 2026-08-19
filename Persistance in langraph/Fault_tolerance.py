@@ -60,3 +60,6 @@ print("\n✅ Final State:", final_state)
 
 
 list(graph.get_state_history({"configurable": {"thread_id": 'thread-1'}}))
+
+
+# The above code demonstrates a fault-tolerant workflow using a state graph. It defines a series of steps that can be executed in sequence, with the ability to save the state at each step using an in-memory checkpointer.
