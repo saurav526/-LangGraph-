@@ -85,6 +85,9 @@ tool_node = ToolNode(tools)
 
 # -------------------
 # 5. Checkpointer
+# checkpointer is responsible for saving the state of the workflow at certain points, allowing for recovery in case of failure or         interruption. In this example, we are using an SqliteSaver as our checkpointer, which saves the state in a SQLite database.
+
+# checkpointer comes the implemention of persistence, which allows for saving and loading the state of the workflow. In this example, we are using an SqliteSaver as our checkpointer, which saves the state in a SQLite database. This allows for fault-tolerant execution of the workflow, as the state can be recovered in case of unexpected interruptions or failures.
 # -------------------
 conn = sqlite3.connect(database="chatbot.db", check_same_thread=False)
 checkpointer = SqliteSaver(conn=conn)
