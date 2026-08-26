@@ -8,10 +8,10 @@ from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode, tools_condition
 from langchain_core.tools import tool
 
-load_dotenv()  # Load environment variables from .env file
-
+load_dotenv() 
 llm = ChatOpenAI(model="gpt-5")
 
+# user deifne tool
 @tool
 def calculator(first_num: float, second_num: float, operation: str) -> dict:
     """
