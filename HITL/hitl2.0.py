@@ -34,7 +34,9 @@ def get_stock_price(symbol: str) -> dict:
     r = requests.get(url)
     return r.json()
 
-
+# -------------------
+# 3. Tools with Human-in-the-Loop (HITL)
+# -------------------
 @tool
 def purchase_stock(symbol: str, quantity: int) -> dict:
     """
