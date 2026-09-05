@@ -8,9 +8,9 @@ from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode, tools_condition
 from langchain_core.tools import tool
 
-load_dotenv()  # Load environment variables from .env file
-
+load_dotenv() 
 llm = ChatOpenAI(model="gpt-5")
+
 
 @tool
 def calculator(first_num: float, second_num: float, operation: str) -> dict:
@@ -40,11 +40,11 @@ tools = [calculator]
 
 llm_with_tools = llm.bind_tools(tools)
 
-# state
+
 class ChatState(TypedDict):
     messages: Annotated[list[BaseMessage], add_messages]
 
-# nodes
+
 def chat_node(state: ChatState):
 
     messages = state["messages"]
@@ -53,7 +53,7 @@ def chat_node(state: ChatState):
 
 tool_node = ToolNode(tools)
 
-# defining graph and nodes
+
 graph = StateGraph(ChatState)
 
 graph.add_node("chat_node", chat_node)

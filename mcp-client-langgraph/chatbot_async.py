@@ -9,8 +9,8 @@ from langgraph.prebuilt import ToolNode, tools_condition
 from langchain_core.tools import tool
 import asyncio
 
-load_dotenv()  # Load environment variables from .env file
-
+load_dotenv()  
+# we use assyn because mcp work only in this situation
 llm = ChatOpenAI(model="gpt-5")
 
 @tool
