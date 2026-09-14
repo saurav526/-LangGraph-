@@ -14,6 +14,7 @@ Summarization: Compresses long conversation history into a shorter summary to re
 Trimming: Removes older or less-important messages to keep the context within the model's limit.
 
 Long-Term Memory Techniques
+
 Store: Saves information that can be retrieved across different conversations or threads.
 Namespace: Organizes memories into separate logical groups, usually by user or application.
 Key-Value Memory: Stores a specific piece of information using a unique key and its corresponding value.
