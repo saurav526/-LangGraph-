@@ -1,0 +1,12 @@
+IN This folder we learn how  apply the memeory management in any chatbot.
+Short-Term Memory Techniques
+State: Stores the current information being passed between LangGraph nodes.
+Messages: Stores the conversation history such as user, AI, system, and tool messages.
+Thread: Provides a unique ID to maintain memory for a specific conversation.
+Reducer: Defines how new information is combined with existing state data.
+Checkpoint: Saves a snapshot of the graph's state at a particular execution point.
+Checkpointer: Saves and restores checkpoints so a conversation can continue later.
+Persistence: Keeps the graph state available even after the current execution ends.
+Conversation History: Maintains previous messages so the LLM can understand the ongoing conversation.
+Summarization: Compresses long conversation history into a shorter summary to reduce token usage.
+Trimming: Removes older or less-important messages to keep the context within the model's limit.
