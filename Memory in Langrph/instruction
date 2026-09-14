@@ -1,5 +1,7 @@
 IN This folder we learn how  apply the memeory management in any chatbot.
+
 Short-Term Memory Techniques
+
 State: Stores the current information being passed between LangGraph nodes.
 Messages: Stores the conversation history such as user, AI, system, and tool messages.
 Thread: Provides a unique ID to maintain memory for a specific conversation.
@@ -10,3 +12,21 @@ Persistence: Keeps the graph state available even after the current execution en
 Conversation History: Maintains previous messages so the LLM can understand the ongoing conversation.
 Summarization: Compresses long conversation history into a shorter summary to reduce token usage.
 Trimming: Removes older or less-important messages to keep the context within the model's limit.
+
+Long-Term Memory Techniques
+Store: Saves information that can be retrieved across different conversations or threads.
+Namespace: Organizes memories into separate logical groups, usually by user or application.
+Key-Value Memory: Stores a specific piece of information using a unique key and its corresponding value.
+Semantic Memory: Stores facts, knowledge, preferences, and information about the user.
+Episodic Memory: Stores information about past events, interactions, or experiences.
+Procedural Memory: Stores instructions or patterns describing how an agent should perform tasks.
+Vector Memory: Stores information as embeddings so semantically similar memories can be retrieved.
+Embedding: Converts text or information into numerical vectors for similarity-based retrieval.
+Semantic Search: Finds memories that are conceptually similar to the current query.
+Memory Retrieval: Selects relevant stored memories and provides them to the agent when needed.
+Memory Extraction: Identifies useful information from conversations that should be saved as memory.
+Memory Update: Modifies existing memories when new information changes or corrects them.
+Memory Deletion: Removes outdated, incorrect, or unwanted stored information.
+Memory Consolidation: Combines multiple related memories into a more useful and compact memory.
+RAG: Retrieves relevant external documents or knowledge and adds them to the LLM's context.
+
