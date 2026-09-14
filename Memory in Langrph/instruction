@@ -31,3 +31,13 @@ Memory Deletion: Removes outdated, incorrect, or unwanted stored information.
 Memory Consolidation: Combines multiple related memories into a more useful and compact memory.
 RAG: Retrieves relevant external documents or knowledge and adds them to the LLM's context.
 
+⭐ Easy distinction
+Short-Term Memory                                   Long-Term Memory
+ State → Current graph                                information	Store → Persistent information
+  Messages → Conversation history	                      Semantic → Facts/preferences
+   Thread → Conversation identity	                       Episodic → Past experiences
+    Reducer → Combines updates	                            Procedural → How to perform tasks
+     Checkpoint → State snapshot	Vector                       Memory → Embedding-based memory
+      Checkpointer → Saves/restores state	                      Retrieval → Finds relevant memories
+       Summarization → Compresses history	                       Consolidation → Combines memories
+        Trimming → Removes old context	                            Update/Delete → Maintains memory quality
