@@ -1,0 +1,47 @@
+Self-RAG = Self-Reflective Retrieval-Augmented Generation.
+
+Self-RAG is an advanced RAG technique where the LLM decides when to retrieve information, evaluates the retrieved information, and checks its own generated answer before giving the final response.
+
+                    ┌─────────────────────┐
+                    │      USER QUERY     │
+                    └──────────┬──────────┘
+                               ↓
+                    ┌─────────────────────┐
+                    │   QUERY ANALYSIS    │
+                    └──────────┬──────────┘
+                               ↓
+                 ┌───────────────────────────┐
+                 │   RETRIEVAL DECISION      │
+                 │ "Do I need external info?"│
+                 └────────────┬──────────────┘
+                              ↓
+                    ┌──────────────────┐
+                    │     RETRIEVER    │
+                    └────────┬─────────┘
+                             ↓
+                    ┌──────────────────┐
+                    │ RETRIEVED DOCS   │
+                    └────────┬─────────┘
+                             ↓
+                 ┌─────────────────────────┐
+                 │  RELEVANCE EVALUATION   │
+                 │ "Are these useful?"     │
+                 └───────────┬─────────────┘
+                             ↓
+                    ┌──────────────────┐
+                    │ KNOWLEDGE CONTEXT │
+                    └────────┬─────────┘
+                             ↓
+                    ┌──────────────────┐
+                    │   ANSWER GENERATION│
+                    └────────┬─────────┘
+                             ↓
+                 ┌─────────────────────────┐
+                 │   SELF-REFLECTION       │
+                 │ Is answer supported?    │
+                 │ Is answer relevant?     │
+                 └───────────┬─────────────┘
+                             ↓
+                    ┌──────────────────┐
+                    │   FINAL ANSWER   │
+                    └──────────────────┘
